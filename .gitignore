@@ -1,5 +1,8 @@
 __pycache__/
-teraform/
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
 venv/
 .env
 user_data_aws_2.txt

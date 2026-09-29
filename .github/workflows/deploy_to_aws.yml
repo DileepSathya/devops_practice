@@ -45,3 +45,19 @@ jobs:
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+
+    - name: Terraform Init
+      working-directory: teraform
+      run: Terraform init
+    
+    - name: Terraform validate
+      working-directory: teraform
+      run: Terraform validate
+
+    - name: Terraform plan
+      working-directory: teraform
+      run: Terraform plan
+
+    - name: Terraform apply
+      working-directory: teraform
+      run: Terraform apply
