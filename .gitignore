@@ -1,0 +1,6 @@
+__pycache__/
+teraform/
+venv/
+.env
+user_data_aws_2.txt
+user_data_aws.txt
