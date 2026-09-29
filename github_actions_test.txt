@@ -1,1 +1,2 @@
 1. created the simple github actions to build image after psuhingit was supposed to rerun that
+2.miised to do retrying
