@@ -71,3 +71,4 @@ jobs:
       env:
         TF_VAR_my_ip: ${{ secrets.MY_IP }}
       run: terraform apply -auto-approve
+      
