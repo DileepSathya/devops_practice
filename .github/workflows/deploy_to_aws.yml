@@ -48,16 +48,16 @@ jobs:
 
     - name: Terraform Init
       working-directory: teraform
-      run: Terraform init
+      run: terraform init
     
     - name: Terraform validate
       working-directory: teraform
-      run: Terraform validate
+      run: terraform validate
 
     - name: Terraform plan
       working-directory: teraform
-      run: Terraform plan
+      run: terraform plan
 
     - name: Terraform apply
       working-directory: teraform
-      run: Terraform apply
+      run: terraform apply
