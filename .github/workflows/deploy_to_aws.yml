@@ -50,17 +50,17 @@ jobs:
       uses: hashicorp/setup-terraform@v3
 
     - name: Terraform Init
-      working-directory: teraform
+      working-directory: terraform
       run: terraform init
     
     - name: Terraform validate
-      working-directory: teraform
+      working-directory: terraform
       run: terraform validate
 
     - name: Terraform plan
-      working-directory: teraform
+      working-directory: terraform
       run: terraform plan
 
     - name: Terraform apply
-      working-directory: teraform
+      working-directory: terraform
       run: terraform apply
