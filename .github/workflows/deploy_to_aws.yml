@@ -59,7 +59,6 @@ jobs:
 
     - name: Terraform plan
       working-directory: terraform
-      run: terraform plan
       env:
         TF_VAR_my_ip: ${{ secrets.MY_IP }}
       run: terraform apply -auto-approve
@@ -67,8 +66,6 @@ jobs:
 
     - name: Terraform apply
       working-directory: terraform
-      run: terraform apply
       env:
         TF_VAR_my_ip: ${{ secrets.MY_IP }}
       run: terraform apply -auto-approve
-      
