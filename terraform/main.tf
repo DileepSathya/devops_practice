@@ -26,16 +26,12 @@ resource "aws_iam_role" "ec2_role" {
   })
 }
 
-resource "aws_iam_role_policy_attachment" "EC2_full_access" {
-  role       = aws_iam_role.ec2_role.name
-  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
-}
-
-resource "aws_iam_role_policy_attachment" "RDS_full_access" {
-  role       = aws_iam_role.ec2_role.name
-  policy_arn = "arn:aws:iam::aws:policy/AmazonRDSFullAccess"
-}
-
+#
+#resource "aws_iam_role_policy_attachment" "RDS_full_access" {
+#  role       = aws_iam_role.ec2_role.name
+#  policy_arn = "arn:aws:iam::aws:policy/AmazonRDSFullAccess"
+#}
+#
 resource "aws_iam_role_policy_attachment" "secret_manager" {
   role       = aws_iam_role.ec2_role.name
   policy_arn = "arn:aws:iam::aws:policy/SecretsManagerReadWrite"
